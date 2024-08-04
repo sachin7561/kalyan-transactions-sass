@@ -1,0 +1,745 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  transition: all 0.35s ease-in-out;
+}
+
+#sidebar {
+  min-width: 50px;
+  z-index: 1000;
+  background-color: #062F75;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 100vh;
+  transition: width 0.25s ease-in-out;
+}
+#sidebar.expand {
+  width: 260px;
+}
+#sidebar .sidebar-logo {
+  margin: auto 0;
+}
+#sidebar .sidebar-logo a {
+  color: #FFF;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+#sidebar .sidebar-nav {
+  padding: 2rem 0;
+  flex: 1 1 auto;
+}
+#sidebar.expand .sidebar-logo, #sidebar.expand a.sidebar-link span {
+  animation: fadeIn 0.25s ease;
+}
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+  display: none;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 1rem 1.5rem;
+}
+.toggle-btn i {
+  font-size: 1.5rem;
+  color: #FFF;
+}
+
+.navbar {
+  background-color: #B9C5DC;
+  width: 1435px;
+  height: 50px;
+}
+.navbar-expand .navbar-collapse {
+  min-width: 200px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.imgkalyanlogo {
+  width: 19.654px;
+  height: 29.197px;
+}
+
+.imgjuelog {
+  width: 34px;
+  height: 22px;
+}
+
+.bg-layer {
+  background-color: #F5F7FB !important;
+}
+
+.card {
+  width: 288px;
+  height: 80px;
+}
+
+.box,
+.box4,
+.box5,
+.box6,
+.box7 {
+  background-color: #FFF;
+  border: 1px solid #DBDFE8;
+  margin: 8px;
+}
+
+.box4 {
+  width: 156.756px;
+  height: 58.907px;
+}
+
+.box5 {
+  width: 156.756px;
+  height: 58.907px;
+}
+
+.box6 {
+  width: 171.528px;
+  height: 58.907px;
+}
+
+.box7 {
+  width: 248.737px;
+  height: 58.911px;
+}
+
+.boxhead {
+  color: var(--Secondary-label, #5972A3);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 7px;
+  margin-top: 5px;
+}
+
+.boxheaddata {
+  width: 76px;
+  height: 15px;
+  flex-shrink: 0;
+  width: 490px;
+  height: 15px;
+  flex-shrink: 0;
+  color: #092353;
+  padding: 2px;
+  font-family: Roboto;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.custom-button,
+.custom-button1 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+}
+
+.custom-button {
+  width: 140px;
+  height: 25px;
+  padding: 6px 13px;
+  border: 1px solid #B9C5DC;
+  background: #B9C5DC;
+  color: #092353;
+  opacity: 0.7;
+}
+
+.custom-button1 {
+  color: #444;
+  background: #D6D6D6;
+  padding: 5px 11px;
+  font-weight: 500;
+}
+
+.activebutton {
+  display: inline-flex;
+  padding: 5px 11px;
+  border-radius: 4px;
+  background: #5EC869;
+  color: #114F14;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+}
+
+.tcr,
+.tcr1 {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+}
+
+.tcr {
+  width: 128px;
+  height: 20px;
+  color: #092353;
+  font-size: 17px;
+}
+
+.tcr1 {
+  color: #092353;
+  font-size: 13px;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #DBDFE8;
+  background: #FFF;
+}
+
+.balanceaccount,
+.balanceweight,
+.duedate,
+.customerdetails {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: #5972A3;
+  text-align: right;
+  padding: 17px;
+}
+
+.balanceaccount-number,
+.balanceweightnumber,
+.duedatedate,
+.customername {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: #092353;
+}
+
+.balanceaccount,
+.balanceweight,
+.duedate,
+.customerdetails {
+  width: auto;
+}
+
+.balanceaccount-number {
+  width: 76px;
+  height: 14px;
+}
+
+.balanceweight {
+  width: 9I6px;
+  height: 14px;
+}
+
+.balanceweightnumber {
+  width: 95px;
+  height: 19px;
+}
+
+.duedate {
+  width: 86px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.duedatedate {
+  width: 86px;
+  height: 19px;
+}
+
+.hidelink {
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #5972A3;
+  text-decoration-line: underline;
+}
+
+.small-vline {
+  width: 1px;
+  height: 48px;
+  opacity: 0.75;
+  background: #DBDFE8;
+}
+
+.kalyanheading {
+  color: #092353;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+}
+
+.tranfer,
+.salesorderadvance {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+}
+
+.tranfer {
+  color: #5972A3;
+}
+
+.salesorderadvance {
+  color: #092353;
+  font-size: 13px;
+}
+
+.table {
+  width: 1415px;
+  height: 157.068px;
+  opacity: 0.9;
+}
+
+td {
+  color: #092353;
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+}
+
+thead,
+.thead-color {
+  color: #5972A3;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+}
+
+.ekm {
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: #092353;
+  width: 128px;
+  height: 20px;
+}
+
+.footer1 {
+  width: 1366px;
+  height: 768px;
+  background: #F6F7FB;
+}
+
+.muziris {
+  font-family: "Roboto";
+  font-size: 10px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #092353;
+}
+
+.layer1,
+.layer2 {
+  flex-shrink: 0;
+  background-color: #F5F7FB;
+}
+
+.layer1 {
+  width: 1390.5px;
+  height: 88.907px;
+}
+
+.layer2 {
+  width: 1390.5px;
+  height: 88.907px;
+}
+
+.cbox {
+  display: flex;
+  width: 317px;
+  height: 58px;
+  padding: 2px 10px;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.cdetails,
+.cdata {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+}
+
+.cdetails {
+  color: #5972A3;
+}
+
+.cdata {
+  color: #092353;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+}
+
+.img-not {
+  width: 13px;
+  height: 14px;
+  color: #0749BE;
+  font-family: "Font Awesome 6 Pro";
+  font-size: 14px;
+}
+
+.img-box {
+  width: 20px;
+  height: 19px;
+  border-radius: 2px;
+  background: #D9DFE9;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.soa-button {
+  display: inline-flex;
+  padding: 6px 19px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  background: #194FD5;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 132px;
+  height: 33px;
+}
+
+img.imglogo,
+img.imgjuelogo {
+  width: 34px;
+  height: 22px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -25px;
+}
+
+.navbar-location {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: #092353;
+}
+
+.navbar-bell {
+  width: 16px;
+  height: 16px;
+}
+
+.transfer {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: #5972A3;
+}
+
+.card-box,
+.x-icon {
+  background: #FFF;
+  border: 1px solid #DBDFE8;
+}
+
+.card-body {
+  width: 70%;
+  align-items: center;
+}
+
+.x-icon {
+  width: 37.956px;
+  height: 52px;
+  border-radius: 0 4px 4px 0;
+}
+
+.card-box {
+  width: 185px;
+  height: 52px;
+  border-radius: 4px 0 0 4px;
+}
+
+.tcrsplit {
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: #092353;
+}
+
+.details {
+  width: 1499px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #sidebar {
+    width: 0;
+    display: none;
+  }
+  #sidebar.expand {
+    display: flex;
+    width: 100%;
+  }
+  .toggle-btn {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+  }
+  .navbar {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .card, .box, .box4, .box5, .box6, .box7 {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .footer1 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .details {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  .table {
+    width: 80%;
+    overflow-x: auto;
+  }
+  .custom-button, .custom-button1, .activebutton, .soa-button {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+  }
+  .imgkalyanlogo, .imgjuelog {
+    width: 30px;
+    height: auto;
+  }
+  .balanceaccount, .balanceweight, .duedate, .customerdetails {
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+  }
+  .x-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .card-box {
+    width: 70%;
+  }
+  .layer1, .layer2 {
+    width: 100%;
+    height: auto;
+  }
+  .cbox {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  .col-12 {
+    width: 100%;
+    margin: 0;
+  }
+  .mb-13 {
+    margin-bottom: 0;
+  }
+  .bg-layer {
+    padding: 10px;
+  }
+  .layer1 {
+    padding: 10px;
+  }
+  .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .align-items-center {
+    align-items: center;
+  }
+  .justify-content-around {
+    justify-content: center;
+  }
+  .tcr {
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+  }
+  .custom-button1 {
+    width: auto;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .small-vline {
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+  }
+  .balanceaccount,
+  .balanceweight,
+  .duedate {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  .balanceaccount-number,
+  .balanceweightnumber,
+  .duedatedate {
+    font-size: 14px;
+  }
+  .cbox {
+    width: 100%;
+    padding: 10px;
+  }
+  .cdetails,
+  .cdata {
+    font-size: 14px;
+  }
+  .hidelink {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .boxheaddata {
+    width: 100%;
+    max-width: 490px;
+    height: auto;
+    color: #092353;
+    padding: 10px;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .balanceaccount-number,
+  .balanceweightnumber,
+  .duedatedate {
+    margin-top: 20px;
+  }
+  .cdata {
+    font-family: "Roboto";
+    font-size: 10px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+  }
+  .balanceweightnumber, .balanceaccount-number {
+    padding: 12px;
+  }
+  .custom-button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: auto;
+  }
+  .card-box {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    width: 200px;
+  }
+}/*# sourceMappingURL=style.css.map */
